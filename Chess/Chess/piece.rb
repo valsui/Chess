@@ -26,8 +26,8 @@ class Piece
   
   def to_s
      
-    return  " 🍤 |" if self.color == :green
-    return  " 🦐 |" if self.color == :blue
+    return  " 🍤 " if self.color == :green
+    return  " 🦐 " if self.color == :blue
     # " #{find_piece} "
   end
   
@@ -65,7 +65,7 @@ class NullPiece < Piece
   end
   
   def to_s
-    "___|"
+    "   "
   end
   
 end

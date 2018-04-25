@@ -11,8 +11,8 @@ class Knight < Piece
   
   def to_s
      
-    return  "_🎠_|" if self.color == :green
-    return  "_🏇_|" if self.color == :blue
+    return  " 🎠 " if self.color == :green
+    return  " 🏇 " if self.color == :blue
     # " #{find_piece} "
   end
   
@@ -31,8 +31,8 @@ class King < Piece
   
   def to_s
      
-    return  "_♚_|" if self.color == :blue 
-    return  "_♔_|" if self.color == :green 
+    return  " ♚ " if self.color == :blue 
+    return  " ♔ " if self.color == :green 
     # " #{find_piece} "
   end
   

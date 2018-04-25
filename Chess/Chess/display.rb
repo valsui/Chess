@@ -21,13 +21,18 @@ class Display
     @cursor.get_input
     @cursor_pos = @cursor.cursor_pos
     header = ("a".."h").to_a
-    header.each { |el| print "|_#{el}_"} 
-    print "|\n"
+    header.each { |el| print "  #{el}"} 
+    print " \n"
     @board.board.each_with_index do |rows, i|
-      print "#{i}|"
+      print "#{i}"
       rows.each_with_index do |cols, j|
-        print cols.to_s.bg_red if [i, j] == @cursor_pos
-        print cols.to_s unless [i, j] == @cursor_pos 
+        if [i, j] == @cursor_pos
+          print cols.to_s.bg_red 
+        elsif (i + j).even?
+          print cols.to_s.bg_gray
+        else 
+          print cols.to_s
+        end
         # print cols.to_s.colorize(cols.color) unless [i, j] == @cursor_pos 
         # print cols.to_s.colorize(cols.color) unless [i, j] == @cursor_pos && (i + j).even?
       end 
