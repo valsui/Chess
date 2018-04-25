@@ -23,4 +23,6 @@ if __FILE__ == $0
   b.move_piece([7,2], [3,3])
   d.render
   p b.in_check?(:green)
+  
+  ##
 end
